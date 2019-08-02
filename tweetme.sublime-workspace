@@ -1,0 +1,331 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"csv",
+				"csv_text"
+			],
+			[
+				"con",
+				"contact"
+			],
+			[
+				"def",
+				"def	def … end"
+			],
+			[
+				"co",
+				"contact_number"
+			],
+			[
+				"la",
+				"last_seen_addr"
+			],
+			[
+				"pa",
+				"params"
+			],
+			[
+				"av",
+				"avatar"
+			],
+			[
+				"st",
+				"status"
+			],
+			[
+				"par",
+				"params"
+			],
+			[
+				"pet",
+				"pet_params"
+			],
+			[
+				"json",
+				"jsonStr"
+			],
+			[
+				"jso",
+				"jsonObj"
+			],
+			[
+				"js",
+				"jsonStr"
+			],
+			[
+				"j",
+				"jsonObj"
+			],
+			[
+				"pt",
+				"pets"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"pak",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"packagecontroll",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 492.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/chang/Documents/recycle.csv",
+		"/Users/chang/Rails/recycle/lib/seeds/recycle.csv",
+		"/Users/chang/Rails/recycle/lib/seeds/seeds.rb",
+		"/Users/chang/Rails/recycle/config/application.rb",
+		"/Users/chang/Downloads/臺北市再生家具.csv",
+		"/Users/chang/Rails/recycle/app/controllers/api/people_controller.rb",
+		"/Users/chang/Documents/臺北市再生家具.csv",
+		"/Users/chang/Rails/iosstockweb/app/controllers/v1/registrations_ontroller.rb",
+		"/Users/chang/Rails/iosstockweb/db/schema.rb",
+		"/Users/chang/Rails/iosstockweb/config/initializers/devise.rb",
+		"/Users/chang/Rails/iosstockweb/app/controllers/v1/sessions_controller.rb",
+		"/Users/chang/Rails/iosstockweb/app/models/user.rb",
+		"/Users/chang/Rails/iosstockweb/config/routes.rb",
+		"/Users/chang/Rails/iosstockweb/config/application.rb",
+		"/Users/chang/Rails/iosstockweb/db/migrate/20180617081052_devise_create_users.rb",
+		"/Users/chang/Rails/iosstockweb/app/controllers/application_controller.rb",
+		"/Users/chang/Rails/iosstockweb/db/migrate/20180617085812_add_authentication_token_to_users.rb",
+		"/Users/chang/Rails/iosstockweb/db/migrate/20180617071605_delete_user_table.rb",
+		"/Users/chang/Rails/iosstockweb/app/controllers/v1/episodes_controller.rb",
+		"/Users/chang/Rails/iosstockweb/Gemfile",
+		"/Users/chang/Rails/iosstockweb/db/development.sqlite3",
+		"/Users/chang/Rails/iosstockweb/app/models/episode.rb",
+		"/Users/chang/Rails/iosstockweb/db/migrate/20180617071855_create_episodes.rb",
+		"/Users/chang/Rails/iosstockweb/app/controllers/users_controller.rb",
+		"/Users/chang/Rails/iosstockweb/db/migrate/20180613155158_create_users.rb",
+		"/Users/chang/Rails/iosstockweb/app/views/users/new.html.erb",
+		"/Users/chang/Documents/Arduino/libraries/Arduino-LiquidCrystal-I2C-library-master/LiquidCrystal_I2C.h",
+		"/Users/chang/Documents/Arduino/libraries/LCD/LCD.cpp",
+		"/Users/chang/Downloads/Arduino-LiquidCrystal-I2C-library-master/LiquidCrystal_I2C.h",
+		"/Users/chang/Rails/pet_lost/app/views/pets/index.html.erb",
+		"/Users/chang/Rails/pet_lost/app/controllers/pets_controller.rb",
+		"/Users/chang/Rails/pet_lost/app/controllers/base_api_controller.rb",
+		"/Users/chang/Rails/pet_lost/config/routes.rb",
+		"/Users/chang/Rails/pet_lost/app/models/pet.rb",
+		"/Users/chang/Rails/pet_lost/db/migrate/20170824052611_change_column.rb",
+		"/Users/chang/Desktop/addjson1",
+		"/Users/chang/Desktop/addjosn",
+		"/Users/chang/Rails/pet_lost/app/views/pets/_curl_get_example.html.erb",
+		"/Users/chang/Rails/pet_lost/db/migrate/20170818062148_add_avatar.rb",
+		"/Users/chang/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/chang/Library/Application Support/Sublime Text 2/Packages/User/XML.sublime-settings",
+		"/Users/chang/Library/Application Support/Sublime Text 2/Packages/Emmet/Emmet.sublime-settings",
+		"/Users/chang/Library/Application Support/Sublime Text 2/Packages/User/Emmet.sublime-settings",
+		"/Users/chang/Rails/pet_lost/db/migrate/20170818034231_create_pets.rb",
+		"/Users/chang/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/chang/Desktop/members.dat"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"serecre.yml",
+			"mailer",
+			"Adafruit_Sensor.h",
+			"sensor",
+			"class BaseApiController < ApplicationController\n    before_action :parse_request, :authenticate_user_from_token!\n\n  def get_json\n    @pets = Pet.order('id DESC').all\n    respond_to do |format|\n    format.json { render :json => @pets.to_json(:methods => [:avatar_url]) }\n    end\n  end\n\n  def post_json\n    render :template => \"pets/index\"\n\n  end\n\n    private\n       def authenticate_user_from_token!\n         if !@json['api_token']\n           render nothing: true, status: :unauthorized\n         else\n           @user = nil\n           User.find_each do |u|\n             if Devise.secure_compare(u.api_token, @json['api_token'])\n               @user = u\n             end\n           end\n         end\n       end\n\n       def parse_request\n         @json = JSON.parse(request.body.read)\n       end\n    end\nend",
+			"post",
+			"snippet",
+			"rails",
+			"\"job_no\": ",
+			"}",
+			"{",
+			"\"job_no\": ",
+			"}",
+			"{",
+			"}",
+			"{",
+			"job_nu",
+			"\"job_num\"",
+			"\"job_num\": ",
+			"20",
+			"yvtc_name",
+			"yvtc_num",
+			"}",
+			"{",
+			"\"job_invoice\": ",
+			"}",
+			"\"job_invoice\": ",
+			"2",
+			"}",
+			"{",
+			"invoice",
+			"others",
+			"description",
+			"name",
+			"job"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"]",
+			"["
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 301.0,
+	"status_bar_visible": true
+}
