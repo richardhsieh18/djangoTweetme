@@ -1,9 +1,9 @@
 
-from django.urls import path
+from django.conf.urls import url
 from .views import tweet_detail_view, tweet_list_view, TweetListView, TweetDetailView
 
 urlpatterns = [
-    path('', TweetListView.as_view(), name='list'),
-    path('2', TweetDetailView.as_view(), name='detail'),
+    url(r'^$', TweetListView.as_view(), name='list'),
+    url(r"^2/$", TweetDetailView.as_view(), name="detail"),
 
 ]
