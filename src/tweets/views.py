@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views.generic import DetailView, ListView
 
 from .models import Tweet
@@ -11,7 +11,11 @@ class TweetDetailView(DetailView):
     #model = Tweet
 
     def get_object(self):
-        Tweet.objects.get(id=2)
+        print(self.kwargs)
+        pk = self.kwargs.get("pk")
+        obj = get_object_or_404(Tweet, pk=pk)
+        #Tweet.objects.get(id=pk)
+        return obj
 
 class TweetListView(ListView):
     #template_name = "tweets/list_view.html"
@@ -24,8 +28,9 @@ class TweetListView(ListView):
     
 
 
-def tweet_detail_view(request, id=2):
-    obj = Tweet.objects.get(id=id)
+def tweet_detail_view(request, pk=None): # pk == id
+    #obj = Tweet.objects.get(pk=pk)
+    obj = get_object_or_404(Tweet, pk=pk)
     print(obj)
     context = {
         "object": obj,
