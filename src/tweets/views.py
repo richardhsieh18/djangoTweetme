@@ -1,19 +1,28 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import DetailView, ListView, CreateView
+from django.views.generic import DetailView, ListView, CreateView, UpdateView
 
 from .models import Tweet
-from .mixins import FormUserNeededMixin
+from .mixins import FormUserNeededMixin, UserOwnerMixin
 from .forms import TweetModelForm
 
-# Create your views here.
-
-class TweetCreateView(LoginRequiredMixin, FormUserNeededMixin, CreateView):
+#Create
+class TweetCreateView(FormUserNeededMixin, CreateView):
     form_class = TweetModelForm
     template_name = "tweets/create_view.html"
     success_url = '/tweet/create/'
-    login_url = '/admin/'
+    #login_url = '/admin/'
 
+#Update    
+class TweetUpdateView(LoginRequiredMixin, UserOwnerMixin, UpdateView):
+    queryset = Tweet.objects.all()
+    form_class = TweetModelForm
+    template_name = "tweets/update_view.html"
+    success_url = '/tweet/'
+
+
+
+#Retrieve
 class TweetDetailView(DetailView):
     #template_name = "tweets/detail_view.html"
     queryset = Tweet.objects.all()
