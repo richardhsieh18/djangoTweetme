@@ -8,6 +8,8 @@ from .views import (
     TweetDeleteView
     )
 
+app_name = 'tweet'
+
 urlpatterns = [
     url(r'^$', TweetListView.as_view(), name='list'), #/tweet/
     url(r'^create/$', TweetCreateView.as_view(), name='create'), #/tweet/create/
