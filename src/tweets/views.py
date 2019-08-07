@@ -2,6 +2,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import DetailView, ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy, reverse
+from django.db.models import Q
 
 from .models import Tweet
 from .mixins import FormUserNeededMixin, UserOwnerMixin
@@ -21,7 +22,7 @@ class TweetUpdateView(LoginRequiredMixin, UserOwnerMixin, UpdateView):
 class TweetDeleteView(LoginRequiredMixin, DeleteView):
     model = Tweet
     template_name = "tweets/delete_confirm.html"
-    success_url = reverse('tweet:list')
+    success_url = reverse_lazy('tweet:list')
 
 class TweetDetailView(DetailView):
     queryset = Tweet.objects.all()
@@ -34,7 +35,17 @@ class TweetDetailView(DetailView):
         return obj
 
 class TweetListView(ListView):
-    queryset = Tweet.objects.all()
+    
+    def get_queryset(self, *args, **kwargs):
+        qs = Tweet.objects.all()
+        print(self.request.GET)
+        query = self.request.GET.get('q', None)
+        if query is not None:
+            qs = qs.filter(
+                Q(content__icontains=query) |
+                Q(user__username__icontains=query)
+                )
+        return qs
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
