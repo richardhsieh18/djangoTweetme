@@ -43,7 +43,9 @@ $(document).ready(function(){
         }
     }
 
-    $.ajax({
+    function fetchTweets(){
+        console.log("fetching")
+        $.ajax({
         url: "/api/tweet/",
         data: {
             "q": query
@@ -57,9 +59,32 @@ $(document).ready(function(){
             console.log("error")
             console.log(data)
         }
+        })
+    }
+    fetchTweets()
+
+
+
+    $("#tweet-form").submit(function(event) {
+        event.preventDefault()
+
+        var this_ = $(this)
+        var formData = this_.serialize()
+        $.ajax({
+        url: "/api/tweet/create/",
+        data: formData,
+        method: "POST",
+        success: function(data){
+            tweetlist = data
+            fetchTweets()
+        },
+        error: function(data){
+            console.log("error")
+            console.log(data)
+            console.log(data.status)
+        }
+        })
     })
-
-
 
 });
 </script>
@@ -73,7 +98,7 @@ $(document).ready(function(){
         <div class='col-sm-9'>
             {% if not request.GET.q %}
                 <div class=''>
-                {% include 'tweets/form.html' with form=create_form action_url=create_url btn_title='Tweet' %}
+                {% include 'tweets/form.html' with form=create_form action_url=create_url btn_title='Tweet' form_id='tweet-form' %}
 
             </div>
             <hr/>
