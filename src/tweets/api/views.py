@@ -46,6 +46,11 @@ class TweetListAPIView(generics.ListAPIView):
     serializer_class = TweetModelSerialzer
     pagination_class = StandardResultsPagination
 
+    def get_serializer_context(self, *args, **kwargs):
+        context = super(TweetListAPIView, self).get_serializer_context(*args, **kwargs)
+        context['requst'] = self.request 
+        return context
+
     def get_queryset(self, *args, **kwargs):
         requested_user = self.kwargs.get("username")
         if requested_user:
