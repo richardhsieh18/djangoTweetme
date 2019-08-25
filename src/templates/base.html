@@ -25,7 +25,6 @@
   </head>
   <body>
   {% include "navbar.html" %}
-  
     <div class='container'>
 
         {% block content %}
@@ -33,7 +32,6 @@
     </div>
 
     {% include "reply-modal.html" %}
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -90,13 +88,14 @@ function loadTweetContainer(tweetContainerID){
         e.preventDefault()
 
         var this_ = $(this)
-        var parentID = this_.attr("data-id")
+        var parentId = this_.attr("data-id")
         var username = this_.attr("data-user")
-        $("#replyModal").modal({
-          
-        })
-
+        var content = this_.parent().parent().find(".content").text()
+        $("#replyModal").modal({})
+        $("#replyModal textarea").after("<input type='hidden' value='" + parentId + "' name='parent_id' />")
+        $("#replyModal textarea").after("<input type='hidden' value='" + true + "' name='reply' />")
         $("#replyModal textarea").val("@" + username + " ")
+        $("#replyModal #replyModalLabel").text("Reply to " + content)
         $("#replyModal").on("shown.bs.modal", function(){
           $('textarea').focus()
         })
@@ -158,7 +157,7 @@ function loadTweetContainer(tweetContainerID){
           verb = "Unlike"
         }
         
-        tweetContent = tweetValue.content 
+        tweetContent = "<span class='content'>" + tweetValue.content + "</span>"
             + "<br/> via <a href='" + tweetValue.user.url + "'>" + 
             tweetValue.user.username + "</a> | " + tweetValue.date_display + " | " + "<a href=/tweet/" + tweetValue.id + ">View</a> | " 
             + "<a class='retweetBtn' href='/tweet/" + tweetValue.id + "/retweet/'>Retweet</a> | " 
@@ -242,7 +241,7 @@ function loadTweetContainer(tweetContainerID){
     var charsStart = 140;
     var charsCurrent = 0;
 
-    $(".tweet-form").append("<span class ='tweetCharsLeft'>" + charsStart +"</span>")
+    $(".tweet-form").append("<span class ='tweetCharsLeft' style='margin-left: 20px'>" + charsStart +" left</span>")
 
     $(".tweet-form textarea").keyup(function(event){
         var tweetValue = $(this).val()
