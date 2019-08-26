@@ -354,7 +354,7 @@ function loadTweetContainer(tweetContainerID, fetchOneId){
         function doneSearchTyping(){
           if (searchQuey) {
             //do search
-            var url = '/tweet/search/?q=' + searchQuey
+            var url = '/search/?q=' + searchQuey
             document.location.href = url;
           }
         }
