@@ -1,9 +1,8 @@
 from rest_framework import generics
 from rest_framework import permissions
-from django.db.models import Q
-
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from django.db.models import Q
 
 from .pagination import StandardResultsPagination
 from tweets.models import Tweet
